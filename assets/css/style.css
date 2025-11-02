@@ -72,7 +72,8 @@ main {background-color: lightblue;
     display:flex;
     /*Make main element take up any suplus space to push footter dow*/
     /*<flex-grow> <flex-shrink> <flex-basis>*/
-    flex:1 0 auto
+    flex:1 0 auto;
+    margin-top: 50px;
 }
 
 /*Footer*/
