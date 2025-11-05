@@ -77,7 +77,13 @@ main {background-color: lightblue;
 }
 
 /*Footer*/
-footer {background-color: orange;
+footer {background-color: orange;}
+
+#social-media-logo{
+  display: flex;           /* makes the list horizontal */
+  justify-content: center; /* centers them horizontally */
+  align-items: center;     /* aligns vertically in line */
+  list-style: none;        /* removes bullet points */
 }
 
 /*Media query:tablets and larger (768px and up)*/
