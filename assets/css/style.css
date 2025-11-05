@@ -81,10 +81,15 @@ footer {background-color: orange;}
 
 #social-media-logo{
   display: flex;           /* makes the list horizontal */
-  justify-content: center; /* centers them horizontally */
+  justify-content: space-evenly; /* centers them horizontally */
   align-items: center;     /* aligns vertically in line */
   list-style: none;        /* removes bullet points */
+  padding: 20px 0;
 }
+
+footer > ul > li > a {font-size: 160%;
+padding: 5%; 
+color: #3a3a3a;}
 
 /*Media query:tablets and larger (768px and up)*/
 @media screen and (min-width: 768px){
