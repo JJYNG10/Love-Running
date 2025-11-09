@@ -16,6 +16,12 @@ color: #3a3a3a;
 font-family: "lato",sans-serif;
 }
 
+h1,h2,h3 {font-family: "Oswald", sans-serif;;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #252525;
+}
+
 /*Header*/
 header {background-color: #ffffff;
 padding: 0 1rem;
@@ -30,12 +36,6 @@ align-items: baseline;
     
 header a{text-decoration: none;
 color: inherit;}
-
-h1 {font-family: "Oswald", sans-serif;;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #252525;
-}
 
 #menu{
     font-size: 110%;
@@ -81,8 +81,21 @@ main {
 height: 800px;
 width: 100%;
 background:url(../images/hero-image.webp) no-repeat center center/cover;
-;
+position: relative;
 }
+
+#cover-text {
+    /*Final rgba value sets the opacity so it is semi-transparent */
+    background-color: rgb(241, 109, 107, .7);
+font-size: 130%;
+position: absolute;
+bottom: 30px;
+width: 80%;
+height: 200px;
+padding: 40px 0 0 10px;
+} 
+
+#cover-text > h2 , #cover-text > h3 {color: #ffffff;}
 
 /*Footer*/
 footer {background-color: #ffffff;
@@ -124,6 +137,11 @@ color: #3a3a3a;}
     main { 
         /*Push the main content down to accommodate larger header */
         margin-top: 79px;}
+}
+
+/* Cover text*/
+#cover-text { width: 300px;
+right: 50px;
 }
 
 /* Media query: small laptop screen (992px)*/
