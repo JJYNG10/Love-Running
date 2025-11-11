@@ -69,16 +69,15 @@ top: 100%;
 
 /*Main content*/
 main {
-    display:flex;
     /*Make main element take up any suplus space to push footter dow*/
     /*<flex-grow> <flex-shrink> <flex-basis>*/
     flex:1 0 auto;
-    margin-top: 50px;
+    margin-top: 47px;
 }
 
 /*hero section*/
 #hero {
-height: 800px;
+height: 600px;
 width: 100%;
 background:url(../images/hero-image.webp) no-repeat center center/cover;
 position: relative;
@@ -93,9 +92,30 @@ bottom: 30px;
 width: 80%;
 height: 200px;
 padding: 40px 0 0 10px;
+text-transform: capitalize;
 } 
 
 #cover-text > h2 , #cover-text > h3 {color: #ffffff;}
+
+/*Reason section*/
+#reason {
+   margin: 20px auto;
+   width: 90%;
+   }
+
+#reason h2 { margin-bottom: 20px;
+    text-align: center;
+    font-size: 280%;}
+
+#benefits-physical>div,#benefits-mental>div {
+    line-height: 20px; 
+    margin:20px;}
+
+#benefits hr {
+    border-top: 1px solid #3a3a3a;
+    margin:5px 0;}
+
+#benefits p { padding: 0 20px;}
 
 /*Footer*/
 footer {background-color: #ffffff;
