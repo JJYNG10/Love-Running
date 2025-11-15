@@ -155,7 +155,6 @@ text-transform: capitalize;
 /*Meet-up Time*/
 /* Meet-up section */
 #meetups {
-    width: 90%;
     margin: 20px auto;
 }
 
@@ -165,46 +164,28 @@ text-transform: capitalize;
     font-size: 280%;
 }
 
-#times { display: flex;
-         flex-direction: row;
-         max-width: 100%;
-         flex: auto;
+#times {
+    background: url('../images/dublin-city.webp') no-repeat center/cover;
+    /* Handles responsivity without the need for a media query */
+    display: flex;
+    flex-wrap: wrap;
 }
 
-#monday {
-    box-sizing: border-box;
-    height: 200px;
-    width: 200px;
+#times div { 
+    color: #fafafa;
+    background-color: rgba(0, 0, 0, .6);
     text-align: center;
+    padding: 15px;
+    /* This will not wrap on screen thats 400px wide.
+    Each div will expand to fill the available space on its row*/
+    flex-basis: 200px; /*Each flex item will try to be 200 px wide — but if the container is too small, it can shrink (unless you tell it not to)*/
+    flex-grow:1 ; /*This controls how much the item can grow relative to its siblings when there’s extra space in the flex container.*/
+    /* Creates a grid of meetup time divs over the background image */
+    border: 2px solid white;
 }
 
-#wedesday{
-    box-sizing: border-box;
-    height: 200px;
-    width: 200px;
-    text-align: center;
-}
-
-#friday{
-    box-sizing: border-box;
-    height: 200px;
-    width: 200px;
-    text-align: center;
-}
-
-#saturday{
-    box-sizing: border-box;
-    height: 200px;
-    width: 200px;
-    text-align: center;
-}
-
-#sunday{
-    box-sizing: border-box;
-    height: 200px;
-    width: 200px;
-    text-align: center;
-}
+/*override the heading colour set in the general style*/
+#times h3 {  color: #fafafa;}
 
 /*Footer*/
 footer {background-color: #ffffff;
