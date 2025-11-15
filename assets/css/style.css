@@ -64,9 +64,9 @@ nav {
     left: 0;
     width: 100%;
     padding: 0 1rem;
-box-shadow: 0 2px 2px #383838; 
-display: none;
-top: 100%;
+    box-shadow: 0 2px 2px #383838; 
+    display: none;
+    top: 100%;
 }
 
 /*Nav toggle*/
@@ -150,6 +150,60 @@ text-transform: capitalize;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/*Meet-up Time*/
+/* Meet-up section */
+#meetups {
+    width: 90%;
+    margin: 20px auto;
+}
+
+#meetups h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 280%;
+}
+
+#times { display: flex;
+         flex-direction: row;
+         max-width: 100%;
+         flex: auto;
+}
+
+#monday {
+    box-sizing: border-box;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+}
+
+#wedesday{
+    box-sizing: border-box;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+}
+
+#friday{
+    box-sizing: border-box;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+}
+
+#saturday{
+    box-sizing: border-box;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+}
+
+#sunday{
+    box-sizing: border-box;
+    height: 200px;
+    width: 200px;
+    text-align: center;
 }
 
 /*Footer*/
