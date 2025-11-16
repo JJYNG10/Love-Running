@@ -1,10 +1,12 @@
-/*Google fronts import*/
+/* Google fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
-/*Asterisk wildcard selector to override default styles added by the browser*/
-* {padding: 0;
-margin:0;
-box-sizing: border-box;}
+/* Asterisk wildcard selector to override default styles added by the browser */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
 /* General styles */
 body {
@@ -23,10 +25,6 @@ h3 {
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #252525;
-}
-
-.hidden-heading {
-    display:none ;
 }
 
 /* Header */
@@ -61,56 +59,62 @@ header a {
     border-bottom: 1px solid #3a3a3a;
 }
 
-/*Nav bar style with drop down toggle*/
+/* Navbar styles with dropdown toggle */
 nav {
     position: absolute;
     background-color: #ffffff;
-    left: 0;
     width: 100%;
+    left: 0;
     padding: 0 1rem;
-    box-shadow: 0 2px 2px #383838; 
+    box-shadow: 0 2px 2px #3a3a3a;
     display: none;
     top: 100%;
 }
 
-/*Nav toggle*/
-#nav-toggle:checked~nav{ display:block;}
+/* Nav toggle */
+#nav-toggle:checked~nav {
+    display: block;
+}
 
-#nav-toggle { display: none;}
+#nav-toggle {
+    display: none;
+}
 
 .nav-toggle-label {
     font-size: 2rem;
 }
 
-/*Main content*/
+/* Main content */
 main {
-    /*Make main element take up any suplus space to push footter dow*/
-    /*<flex-grow> <flex-shrink> <flex-basis>*/
-    flex:1 0 auto;
+    /* Make main element take up any surplus space to push footer down */
+    flex: 1 0 auto;
     margin-top: 47px;
 }
 
-/*hero section*/
+/* Hero section */
 #hero {
-height: 600px;
-width: 100%;
-background:url(../images/hero-image.webp) no-repeat center center/cover;
-position: relative;
+    height: 600px;
+    width: 100%;
+    background: url("../images/hero-image.webp") no-repeat center center/cover;
+    position: relative;
 }
 
 #cover-text {
-    /*Final rgba value sets the opacity so it is semi-transparent */
-    background-color: rgb(241, 109, 107, .7);
-font-size: 130%;
-position: absolute;
-bottom: 30px;
-width: 80%;
-height: 200px;
-padding: 40px 0 0 10px;
-text-transform: capitalize;
-} 
+    /* Final rgba value sets the opacity so it is semi-transparent */
+    background-color: rgba(241, 109, 107, .7);
+    font-size: 130%;
+    position: absolute;
+    bottom: 30px;
+    width: 80%;
+    min-height: 200px;
+    padding-top: 40px;
+    padding-left: 10px;
+}
 
-#cover-text > h2 , #cover-text > h3 {color: #ffffff;}
+#cover-text>h2,
+#cover-text>h3 {
+    color: #ffffff;
+}
 
 /* Reasons section */
 #reasons {
@@ -156,9 +160,7 @@ text-transform: capitalize;
     justify-content: center;
 }
 
-/*Meet-up Time*/
-/* Meet-up section */
-
+/* Meetup Times section */
 #times {
     background: url('../images/dublin-city.webp') no-repeat center/cover;
     /* Handles responsivity without the need for a media query */
@@ -166,37 +168,56 @@ text-transform: capitalize;
     flex-wrap: wrap;
 }
 
-#times div { 
+#times div {
     color: #fafafa;
     background-color: rgba(0, 0, 0, .6);
-    text-align: center;
     padding: 15px;
-    /* This will not wrap on screen thats 400px wide.
-    Each div will expand to fill the available space on its row*/
-    flex-basis: 200px; /*Each flex item will try to be 200 px wide — but if the container is too small, it can shrink (unless you tell it not to)*/
-    flex-grow:1 ; /*This controls how much the item can grow relative to its siblings when there’s extra space in the flex container.*/
+    text-align: center;
+    /* This will not wrap on screens of less than 400px wide.
+    Each div will expand to fill the available space on its row */
+    flex-basis: 200px;
+    flex-grow: 1;
     /* Creates a grid of meetup time divs over the background image */
     border: 2px solid white;
 }
 
-/*override the heading colour set in the general style*/
-#times h3 {  color: #fafafa;}
-
-/*Footer*/
-footer {background-color: #ffffff;
-border-top: 2px solid #252525;} 
-
-#social-media-logo{
-  display: flex;           /* makes the list horizontal */
-  justify-content: space-evenly; /* centers them horizontally */
-  align-items: center;     /* aligns vertically in line */
-  list-style: none;        /* removes bullet points */
-  padding: 20px 0;
+#times h3 {
+    /* Override the heading colour set in general styles */
+    color: #fafafa;
 }
 
-footer > ul > li > a {font-size: 160%;
-padding: 5%; 
-color: #3a3a3a;}
+/* Gallery page */
+#photos img {
+    width: 100%;
+    line-height: 1em;
+}
+
+#photos {
+    line-height: 0;
+}
+
+/* Footer */
+#social-networks {
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+#social-networks i {
+    font-size: 160%;
+    padding: 5%;
+    color: #3a3a3a;
+}
+
+/* Media query: larger or landscape phones (576px and up) */
+@media screen and (min-width: 576px) {
+    #photos {
+        column-count: 2;
+        column-gap: 0;
+    }
+}
 
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
@@ -258,12 +279,21 @@ color: #3a3a3a;}
         align-self: flex-end;
     }
 
+    /* Gallery */
+    #photos {
+        column-count: 3;
+    }
 }
 
 /* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
+    }
+
+    /* Gallery */
+    #photos {
+        column-count: 4;
     }
 }
 
